@@ -1,26 +1,42 @@
-# Portail DOJ San Andreas — installation 100 % gratuite
+# Department of Justice — San Andreas
 
-Le site fonctionne sur **GitHub Pages** et envoie les formulaires vers Discord grâce à **Google Apps Script**.
+Portail DOJ RP construit avec React, Vite, Supabase et Discord OAuth.
 
-## Mise en ligne
-1. Crée un dépôt public GitHub nommé `doj-san-andreas`.
-2. Ajoute `index.html`, `styles.css` et `app.js`.
-3. Ouvre **Settings → Pages**.
-4. Choisis **Deploy from a branch**, branche `main`, dossier `/root`.
+## Installation locale
 
-## Discord
-1. Dans chaque salon : **Paramètres → Intégrations → Webhooks**.
-2. Crée les webhooks pour les plaintes, partenariats et candidatures.
-3. Ne mets jamais les webhooks directement dans le site public.
+1. Copie `.env.example` en `.env`.
+2. Renseigne l’URL Supabase et la **Publishable key**.
+3. Lance :
 
-## Google Apps Script
-1. Crée un projet Google Apps Script.
-2. Colle le contenu de `apps-script.gs`.
-3. Remplace les valeurs `COLLE_ICI_WEBHOOK...`.
-4. **Déployer → Nouveau déploiement → Application Web**.
-5. Exécuter en tant que : **Moi**. Accès : **Tout le monde**.
-6. Copie l'URL se terminant par `/exec`.
-7. Dans `app.js`, remplace `COLLE_ICI_TON_URL_GOOGLE_APPS_SCRIPT` par cette URL.
-8. Remets `app.js` sur GitHub.
+```bash
+npm install
+npm run dev
+```
 
-Le site est fictif et destiné au roleplay.
+## Mise en ligne sur GitHub Pages
+
+1. Remplace le contenu de ton dépôt par ce projet.
+2. Dans GitHub : `Settings > Secrets and variables > Actions`.
+3. Crée deux secrets :
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_PUBLISHABLE_KEY`
+4. Dans `Settings > Pages`, choisis **GitHub Actions** comme source.
+5. Envoie les fichiers sur la branche `main`.
+
+## Base de données
+
+Dans Supabase, ouvre `SQL Editor`, colle le contenu de `supabase/schema.sql`, puis exécute-le.
+
+## Authentification Discord
+
+Dans Supabase, l’URL du site et l’URL autorisée doivent être :
+
+`https://zeatiax.github.io/DOJ-SAN-ANDREAS/`
+
+La callback Discord reste celle indiquée par Supabase :
+
+`https://<project-id>.supabase.co/auth/v1/callback`
+
+## Sécurité
+
+Ne mets jamais la **Secret key** Supabase dans ce projet. Seule la **Publishable key** est destinée au navigateur.

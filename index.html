@@ -1,22 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Department of Justice — San Andreas</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header><div class="wrap nav"><div class="brand"><span class="seal">DOJ</span><div><b>DEPARTMENT OF JUSTICE</b><small>État de San Andreas</small></div></div><nav><a href="#accueil">Accueil</a><a href="#services">Services</a><a href="#reinsertion">Réinsertion</a><a href="#formulaires">Formulaires</a></nav></div></header>
-<main>
-<section id="accueil" class="hero"><div class="wrap"><p class="eyebrow">JUSTICE • INTÉGRITÉ • SERVICE PUBLIC</p><h1>Department of Justice<br><span>de San Andreas</span></h1><p class="intro">Le DOJ veille à l'application de la loi, à la protection des droits et au bon fonctionnement des institutions judiciaires de l'État.</p><div class="actions"><a class="btn" href="#formulaires">Déposer une plainte</a><a class="btn ghost" href="#reinsertion">Pôle de réinsertion</a></div></div></section>
-<section id="services" class="section"><div class="wrap"><p class="eyebrow dark">NOS MISSIONS</p><h2>Un service judiciaire accessible et structuré</h2><div class="cards"><article><h3>⚖️ Justice & audiences</h3><p>Organisation des audiences, suivi des procédures et décisions judiciaires.</p></article><article><h3>📂 Plaintes & signalements</h3><p>Réception des plaintes et transmission au parquet pour examen.</p></article><article><h3>🤝 Réinsertion</h3><p>Accompagnement des personnes souhaitant reprendre une activité stable et légale.</p></article></div></div></section>
-<section id="reinsertion" class="section navy"><div class="wrap split"><div><p class="eyebrow">PÔLE DE RÉINSERTION</p><h2>Une seconde chance peut changer une vie</h2><p>Beaucoup de personnes peuvent commettre une erreur. Le Pôle de Réinsertion vise à leur permettre de se rattraper, de retrouver un cadre professionnel et de reconstruire durablement leur avenir.</p><ul><li><b>25 % du coût salarial remboursé à l'entreprise</b><br>Le salarié reste payé normalement, tandis qu'une partie du coût est prise en charge par le programme.</li><li><b>Accompagnement par le DOJ</b><br>Suivi du candidat, échanges avec l'employeur et médiation en cas de difficulté.</li><li><b>Possibilité d'embauche durable</b><br>La période de réinsertion peut déboucher sur un contrat classique.</li></ul></div><aside><h3>Entreprises partenaires</h3><p>Offrez une opportunité concrète tout en bénéficiant d'un accompagnement administratif et financier.</p><button data-open="partenariat">Devenir partenaire</button></aside></div></section>
-<section id="formulaires" class="section"><div class="wrap"><p class="eyebrow dark">PORTAIL DES DEMANDES</p><h2>Transmettre un dossier au DOJ</h2><div class="tabs"><button class="tab active" data-tab="plainte">Déposer une plainte</button><button class="tab" data-tab="partenariat">Partenariat entreprise</button><button class="tab" data-tab="reinsertionForm">Candidature réinsertion</button></div><div class="panel">
-<form id="plainte" class="form active" data-type="plainte"><div class="grid"><label>Nom du plaignant<input name="plaignant" required></label><label>Téléphone<input name="telephone" required></label><label>Personne mise en cause<input name="mis_en_cause" required></label><label>Date des faits<input type="date" name="date_faits" required></label></div><label>Résumé des faits<textarea name="faits" rows="6" required></textarea></label><div class="grid"><label>Témoins<input name="temoins"></label><label>Liens vers les preuves<input name="preuves" placeholder="Image, vidéo, document..."></label></div><button type="submit">Envoyer la plainte</button></form>
-<form id="partenariat" class="form" data-type="partenariat"><div class="grid"><label>Entreprise<input name="entreprise" required></label><label>Responsable<input name="responsable" required></label><label>Téléphone<input name="telephone" required></label><label>Poste proposé<input name="poste" required></label></div><label>Présentation et besoins<textarea name="description" rows="6" required></textarea></label><button type="submit">Envoyer la demande</button></form>
-<form id="reinsertionForm" class="form" data-type="reinsertion"><div class="grid"><label>Nom et prénom<input name="nom" required></label><label>Téléphone<input name="telephone" required></label><label>Domaines recherchés<input name="domaines" required></label><label>Disponibilités<input name="disponibilites" required></label></div><label>Motivation et projet professionnel<textarea name="motivation" rows="6" required></textarea></label><button type="submit">Envoyer la candidature</button></form>
-<div id="status"></div></div></div></section>
-</main>
-<footer><div class="wrap">© 2026 Department of Justice — San Andreas • Site fictif destiné au roleplay.</div></footer>
-<script src="app.js"></script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07162f" />
+    <meta name="description" content="Portail roleplay du Department of Justice de San Andreas" />
+    <title>Department of Justice — San Andreas</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
